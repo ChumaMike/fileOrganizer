@@ -1,0 +1,26 @@
+[
+    {
+        "task": "AI-Powered Email Responder",
+        "done": false
+    },
+    {
+        "task": "Flask Dashboard for Automations",
+        "done": false
+    },
+    {
+        "task": "Job Finder Bot",
+        "done": false
+    },
+    {
+        "task": "Real-Time Price Tracker + Alert",
+        "done": false
+    },
+    {
+        "task": "Voice-Controlled Automation Bot",
+        "done": false
+    },
+    {
+        "task": "Automation-as-a-Service Platform (like IFTTT)",
+        "done": false
+    }
+]

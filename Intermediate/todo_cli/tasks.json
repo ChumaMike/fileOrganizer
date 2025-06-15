@@ -1,0 +1,22 @@
+[
+    {
+        "task": "Instagram/Facebook Auto Poster",
+        "done": false
+    },
+    {
+        "task": "Birthday Email Notifier",
+        "done": false
+    },
+    {
+        "task": "Telegram Bot Assistant",
+        "done": false
+    },
+    {
+        "task": "Google Sheets Auto-Updater",
+        "done": false
+    },
+    {
+        "task": "Auto Generate Reports from CSV/Excel",
+        "done": false
+    }
+]

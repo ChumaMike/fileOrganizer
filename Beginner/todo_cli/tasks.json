@@ -1,0 +1,22 @@
+[
+    {
+        "task": "File Organizer Bot",
+        "done": false
+    },
+    {
+        "task": "To-Do CLI app",
+        "done": false
+    },
+    {
+        "task": "Auto Email Sender",
+        "done": false
+    },
+    {
+        "task": "Web Scraper for News or Weather",
+        "done": false
+    },
+    {
+        "task": "Bulk File Renamer",
+        "done": false
+    }
+]
