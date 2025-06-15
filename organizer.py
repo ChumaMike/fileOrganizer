@@ -78,3 +78,28 @@ def get_unique_dest(dest_path):
         if not new_path.exists():
             return new_path
         i += 1
+        
+def organize_folder(folder):
+    for item in os.listdir(folder):
+        item_path = folder / item
+        if item_path.is_file():
+            if is_already_sorted(item_path, folder):
+                continue
+
+            ext = item_path.suffix
+            category = get_category(ext)
+            dest_path = folder / category
+
+            if category in ["Documents", "Installers", "Code", "Archives", "Images"]:
+                subcat = get_document_subcategory(item, ext)
+                if subcat:
+                    dest_path = dest_path / subcat
+
+            dest_path.mkdir(parents=True, exist_ok=True)
+            final_dest = get_unique_dest(dest_path / item_path.name)
+            shutil.move(str(item_path), str(final_dest))
+            print(f"Moved {item} → {final_dest.relative_to(folder)}")
+
+if __name__ == "__main__":
+    organize_folder(TARGET_FOLDER)
+    print("✅ Done organizing!")
