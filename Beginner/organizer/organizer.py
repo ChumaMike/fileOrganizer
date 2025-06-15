@@ -24,16 +24,16 @@ FILE_TYPES = {
 }
 
 DOCUMENT_SUBCATEGORIES = {
-    "AIML": [
+    "AI_ML": [
         "anaconda", "pytorch", "tensorflow", "scikit", "keras", "machine learning", "ai", "ml", "jupyter", "colab", "notebook", ".whl"
     ],
-    "Chuma PY": [
+    "Python": [
         "python", "pycharm", ".py", ".ipynb", "pip", "virtualenv", "venv"
     ],
-    "Chuma App Dev": [
+    "App_Development": [
         "android", "studio", "flutter", "react", "node", "npm", "gradle", "kotlin", "swift", "xcode", "appdev"
     ],
-    "Chuma Java": [
+    "Java": [
         "java", "jdk", "jre", ".jar", "eclipse", "intellij"
     ],
     "Automation": [
