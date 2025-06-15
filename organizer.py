@@ -43,3 +43,38 @@ DOCUMENT_SUBCATEGORIES = {
         "word", "excel", "powerpoint", "office", ".docx", ".xlsx", ".pptx", ".ppt", ".xls"
     ],
 }
+
+
+def get_category(file_ext):
+    for category, extensions in FILE_TYPES.items():
+        if file_ext.lower() in extensions:
+            return category
+    return "Others"
+
+def get_document_subcategory(filename, file_ext):
+    lower_name = filename.lower()
+    for subcat, keywords in DOCUMENT_SUBCATEGORIES.items():
+        for keyword in keywords:
+            if keyword.startswith("."):
+                if file_ext.lower() == keyword:
+                    return subcat
+            elif keyword in lower_name:
+                return subcat
+    return None
+
+def is_already_sorted(item_path, folder):
+    rel = item_path.relative_to(folder)
+    return len(rel.parts) > 1
+
+def get_unique_dest(dest_path):
+    if not dest_path.exists():
+        return dest_path
+    stem, suffix = dest_path.stem, dest_path.suffix
+    parent = dest_path.parent
+    i = 1
+    while True:
+        new_name = f"{stem} ({i}){suffix}"
+        new_path = parent / new_name
+        if not new_path.exists():
+            return new_path
+        i += 1
